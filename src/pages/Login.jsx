@@ -33,7 +33,7 @@ function Login() {
 
   return (
     <div className="container">
-      <h1>{import.meta.env.TEST}</h1>
+      <h1>{import.meta.env.VITE_TEST}</h1>
       <div className='login-register-container'>
         <form onSubmit={handleSubmit} ref={loginForm}>
           <div className='form-field-wrapper'>

@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useState, useEffect } from "react";
 import { account } from "../appwriteConfig";
 import { useNavigate } from "react-router-dom";
@@ -25,6 +27,7 @@ export const AuthProvider = ({children}) => {
             console.log(response);
 
         } catch (error) {
+            alert(error.message)
             console.log(error.message);
         }
         setLoading(false)

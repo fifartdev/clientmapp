@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useAuth } from '../utils/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 
 function Login() {
@@ -8,11 +9,13 @@ function Login() {
 
   const loginForm = useRef(null)
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     if (user){
       navigate('/')
     }
-  },[])
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault()

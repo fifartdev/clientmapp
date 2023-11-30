@@ -4,9 +4,15 @@ import { useAuth } from '../utils/AuthContext'
 
 function Login() {
 
-  const { loginUser } = useAuth()
+  const { user, loginUser } = useAuth()
 
   const loginForm = useRef(null)
+
+  useEffect(() => {
+    if (user){
+      navigate('/')
+    }
+  },[])
 
   const handleSubmit = (e) => {
     e.preventDefault()

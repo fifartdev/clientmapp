@@ -1,9 +1,8 @@
-import React from 'react'
 
 function Home() {
   return (
     <div className="container">
-      <h1>Home</h1>
+      <h1>Πίνακας Ελέγχου Πελατολογίου</h1>
 
     </div>
   )
